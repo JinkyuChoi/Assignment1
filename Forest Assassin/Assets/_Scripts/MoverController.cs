@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Util;
 
-public class ObstacleController : MonoBehaviour
+public class MoverController : MonoBehaviour
 {
     public float scrollSpeed;
-
     public Boundary boundary;
 
     // Start is called before the first frame update
@@ -42,4 +41,6 @@ public class ObstacleController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+
 }

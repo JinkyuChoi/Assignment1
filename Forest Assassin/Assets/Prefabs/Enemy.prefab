@@ -41,11 +41,11 @@ GameObject:
   - component: {fileID: 6252761054872136388}
   - component: {fileID: 6252761054872136389}
   - component: {fileID: 6252761054872136395}
-  - component: {fileID: -2320646123816015207}
   - component: {fileID: 462171927}
+  - component: {fileID: 2985453093407646405}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,20 +132,6 @@ MonoBehaviour:
     bottom: -7
     left: -6
     right: 6
---- !u!136 &-2320646123816015207
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6252761054872136390}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.035
-  m_Height: 3.13
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &462171927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +148,20 @@ MonoBehaviour:
   attackArea: {fileID: 110620452}
   attackCount: 1
   spawnWait: 2
-  waveWait: 0
-  startWait: 10
   gameOver: 0
+--- !u!70 &2985453093407646405
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6252761054872136390}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.16576743, y: 0}
+  m_Size: {x: 1.7384648, y: 3.13}
+  m_Direction: 0

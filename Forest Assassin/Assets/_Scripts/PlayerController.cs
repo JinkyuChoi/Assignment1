@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float magazine;
     public float attackSpeed;
     public float myTime;
+    public GameController gameController;
 
     private Rigidbody2D rBody;
 
@@ -44,5 +45,13 @@ public class PlayerController : MonoBehaviour
         rBody.position = new Vector2(
             Mathf.Clamp(rBody.position.x, boundary.left, boundary.right),
             Mathf.Clamp(rBody.position.y, boundary.bottom, boundary.top));
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Obstacle" || other.gameObject.tag == "EnemyBullet" || other.gameObject.tag == "Enemy") 
+        {
+                gameController.Lives -= 1;
+        }
     }
 }
