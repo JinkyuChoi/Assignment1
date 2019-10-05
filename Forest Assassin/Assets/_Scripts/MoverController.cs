@@ -12,7 +12,8 @@ public class MoverController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GameObject gameControllerObject = GameObject.FindWithTag("GameController");
+        gameController = gameControllerObject.GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -54,9 +55,11 @@ public class MoverController : MonoBehaviour
 
             if (other.gameObject.tag == "Enemy")
             {
+
                 Destroy(other.gameObject);
                 Destroy(this.gameObject);
                 gameController.Scores += 100;
+
             }
         }
     }

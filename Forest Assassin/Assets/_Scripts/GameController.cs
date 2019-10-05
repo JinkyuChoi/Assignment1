@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -8,7 +9,10 @@ public class GameController : MonoBehaviour
     private int _lives;
 
     [SerializeField]
-    private int _score;
+    private int _scores;
+
+    public Text livesLabel;
+    public Text scoresLabel;
 
     public bool gameOver;
     public int Lives
@@ -28,7 +32,7 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                //livesLabel.text = "Lives: " + _lives.ToString();
+                livesLabel.text = "LIVES: " + _lives.ToString();
             }
 
         }
@@ -38,12 +42,13 @@ public class GameController : MonoBehaviour
     {
         get
         {
-            return _score;
+            return _scores;
         }
 
         set
         {
-            _score = value;
+            _scores = value;
+            scoresLabel.text = "SCORES: " + _scores.ToString();
         }
     }
     // Start is called before the first frame update

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4343048357866261997}
-  - component: {fileID: 4343048357866261996}
+  - component: {fileID: 1701924369}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4343048357866261996
+--- !u!114 &1701924369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c97b3a44984f3a4caa9c94a6056b084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lives: 5
-  _score: 0
+  _lives: 0
+  _scores: 0
+  livesLabel: {fileID: 0}
+  scoresLabel: {fileID: 0}
   gameOver: 0
