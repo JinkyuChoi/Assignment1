@@ -10,6 +10,7 @@ public class SpawnObstacle : MonoBehaviour
     public int obstacleCount; // How many hazards per wave?
     public float spawnWait; // How long between each hazard in each wave?
     public float waveWait;
+    public float startWait;
 
     public bool gameOver;
     // Start is called before the first frame update
@@ -26,22 +27,20 @@ public class SpawnObstacle : MonoBehaviour
 
     IEnumerator SpawnWaves()
     {
-        //Delay until first wave appers
+        yield return new WaitForSeconds(startWait);
         while (true)
         {
-            // Spawning our hazards
             for (int i = 0; i < obstacleCount; i++)
             {
-                Vector2 spawnPosition = new Vector2(Random.Range(-7, 7), 22);
-                //                                     11                    -4         4
+                Vector2 spawnPosition = new Vector2(Random.Range(boundary.left, boundary.right), boundary.top);
                 Instantiate(obstacle, spawnPosition, Quaternion.identity);
-                yield return new WaitForSeconds(spawnWait); // Wait time between spawning each hazard
+                yield return new WaitForSeconds(spawnWait);
             }
-            yield return new WaitForSeconds(waveWait); // Delay between each wave of hazard
+            yield return new WaitForSeconds(waveWait); 
 
             if (gameOver)
             {
-                break; // Stops any more waves from being generated
+                break;
             }
         }
     }
