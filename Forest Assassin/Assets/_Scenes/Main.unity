@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72650580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.85, y: 3, z: 0}
+  m_LocalPosition: {x: -14.37, y: 5.64, z: 0}
   m_LocalScale: {x: 2.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0a86ced2ecf4a4aaf9ea00ea3b3540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.07
+  scrollSpeed: 0.1
   resetPosition: 30
   resetPoint: -17.5
 --- !u!212 &926637720
@@ -373,8 +373,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926637718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 31.6, z: 0}
-  m_LocalScale: {x: 2.97, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 31.6, z: 0}
+  m_LocalScale: {x: 3, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -472,6 +472,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0a86ced2ecf4a4aaf9ea00ea3b3540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.07
+  scrollSpeed: 0.1
   resetPosition: 30
   resetPoint: -17.5
+--- !u!1 &1433835732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1433835734}
+  - component: {fileID: 1433835733}
+  m_Layer: 0
+  m_Name: TreeGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1433835733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433835732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a879582ef9f27b4c803f734d6467f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 2016842409755669690, guid: 7c5b5648d1f4095478a55b54dd4718e1,
+    type: 3}
+  boundary:
+    top: 22
+    bottom: -7
+    left: -7
+    right: 7
+  obstacleCount: 50
+  spawnWait: 0.2
+  waveWait: 3
+  gameOver: 0
+--- !u!4 &1433835734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433835732}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.360996, y: 10.457408, z: -20.535217}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
