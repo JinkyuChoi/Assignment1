@@ -37,5 +37,9 @@ public class ObstacleController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (transform.position.y >= boundary.top)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
