@@ -132,6 +132,8 @@ MonoBehaviour:
     bottom: -7
     left: -6
     right: 6
+  gameController: {fileID: 4343048357866261996, guid: a63e3294cda9cb24894147e74d1b065a,
+    type: 3}
 --- !u!114 &462171927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +161,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.16576743, y: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8178671899791854631}
   - component: {fileID: 8178671899791854629}
   - component: {fileID: 4763061697737388884}
-  - component: {fileID: 1890472655089500840}
+  - component: {fileID: 8785321910135887299}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: PlayerBullet
@@ -101,6 +101,8 @@ MonoBehaviour:
     bottom: -7
     left: 0
     right: 0
+  gameController: {fileID: 4343048357866261996, guid: a63e3294cda9cb24894147e74d1b065a,
+    type: 3}
 --- !u!61 &4763061697737388884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,15 +129,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6659625, y: 14.628867}
   m_EdgeRadius: 0
---- !u!114 &1890472655089500840
-MonoBehaviour:
+--- !u!50 &8785321910135887299
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8178671899791854628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a367ab6b1324834296832347ff84d2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

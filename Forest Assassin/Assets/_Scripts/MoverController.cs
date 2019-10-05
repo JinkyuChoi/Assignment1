@@ -7,6 +7,7 @@ public class MoverController : MonoBehaviour
 {
     public float scrollSpeed;
     public Boundary boundary;
+    public GameController gameController;
 
     // Start is called before the first frame update
     void Start()
@@ -42,5 +43,21 @@ public class MoverController : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (this.gameObject.tag == "PlayerBullet")
+        {
+            if (other.gameObject.tag == "Obstacle")
+            {
+                Destroy(this.gameObject);
+            }
 
+            if (other.gameObject.tag == "Enemy")
+            {
+                Destroy(other.gameObject);
+                Destroy(this.gameObject);
+                gameController.Scores += 100;
+            }
+        }
+    }
 }

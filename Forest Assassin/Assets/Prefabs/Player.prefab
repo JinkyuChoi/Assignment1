@@ -137,7 +137,8 @@ MonoBehaviour:
   magazine: 0
   attackSpeed: 1
   myTime: 0
-  gameController: {fileID: 0}
+  gameController: {fileID: 4343048357866261996, guid: a63e3294cda9cb24894147e74d1b065a,
+    type: 3}
 --- !u!50 &2761509856912596687
 Rigidbody2D:
   serializedVersion: 4
