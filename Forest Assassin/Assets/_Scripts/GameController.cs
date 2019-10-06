@@ -21,6 +21,11 @@ public class GameController : MonoBehaviour
     public GameObject endLabel;
     public GameObject restartButton;
 
+    public AudioSource bgm;
+    public AudioSource step;
+    public AudioSource enemyHit;
+    public AudioSource obstacleHit;
+
     public int Lives
     {
         get
@@ -61,6 +66,14 @@ public class GameController : MonoBehaviour
     void Start()
     {
 
+        bgm.playOnAwake = true;
+        bgm.loop = true;
+
+
+
+        step.playOnAwake = true;
+        step.loop = true; 
+
         switch(SceneManager.GetActiveScene().name)
         {
             case "Start":
@@ -68,18 +81,24 @@ public class GameController : MonoBehaviour
                 livesLabel.enabled = false;
                 endLabel.SetActive(false);
                 restartButton.SetActive(false);
+                step.Stop();
+                bgm.Stop();
                 break;
             case "Main":
                 startLabel.SetActive(false);
                 startButton.SetActive(false);
                 endLabel.SetActive(false);
                 restartButton.SetActive(false);
+                step.Play();
+                bgm.Play();
                 break;
             case "End":
                 scoresLabel.enabled = false;
                 livesLabel.enabled = false;
                 startLabel.SetActive(false);
                 startButton.SetActive(false);
+                step.Stop();
+                bgm.Stop();
                 break;
         }
 

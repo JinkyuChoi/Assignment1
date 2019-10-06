@@ -9,10 +9,12 @@ public class PlayerController : MonoBehaviour
     public Boundary boundary;
     public GameObject attackArea;
     public GameObject attack;
-    public float magazine;
+
     public float attackSpeed;
     public float myTime;
     public GameController gameController;
+    public AudioSource gunShot;
+    public AudioSource hit;
 
     private Rigidbody2D rBody;
 
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButton("Fire1") && myTime > attackSpeed)
         {
             Instantiate(attack, attackArea.transform.position, attackArea.transform.rotation);
+            gunShot.Play();
             myTime = 0.0f;
         }
     }
@@ -51,7 +54,9 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle" || other.gameObject.tag == "EnemyBullet" || other.gameObject.tag == "Enemy") 
         {
-                gameController.Lives -= 1;
+            gameController.Lives -= 1;
+            hit.Play();
+         
         }
     }
 }

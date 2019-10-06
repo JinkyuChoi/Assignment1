@@ -9,7 +9,8 @@ public class SpawnAttack : MonoBehaviour
     public int attackCount;
     public float spawnWait;
 
-    public bool gameOver;
+    public AudioSource attackSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +30,8 @@ public class SpawnAttack : MonoBehaviour
             for (int i = 0; i < attackCount; i++)
             {
                 Instantiate(attack, attackArea.transform.position, attackArea.transform.rotation);
+                attackSound.Play();
                 yield return new WaitForSeconds(spawnWait);
-            }
-
-            if (gameOver)
-            {
-                break;
             }
         }
     }

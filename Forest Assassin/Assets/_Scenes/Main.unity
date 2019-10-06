@@ -719,11 +719,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 4343048357866261999, guid: a63e3294cda9cb24894147e74d1b065a,
-        type: 3}
-      propertyPath: m_TagString
-      value: GameController
-      objectReference: {fileID: 0}
     - target: {fileID: 4343048357866261997, guid: a63e3294cda9cb24894147e74d1b065a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -788,15 +783,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 644021599}
     - target: {fileID: 1701924369, guid: a63e3294cda9cb24894147e74d1b065a, type: 3}
-      propertyPath: gameOver
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1701924369, guid: a63e3294cda9cb24894147e74d1b065a, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2761509856912596683, guid: 76567ce4632606d49a9426044c6ea519,
-        type: 3}
-    - target: {fileID: 1701924369, guid: a63e3294cda9cb24894147e74d1b065a, type: 3}
       propertyPath: startLabel
       value: 
       objectReference: {fileID: 644021598}
@@ -860,8 +846,8 @@ MonoBehaviour:
   boundary:
     top: 22
     bottom: -7
-    left: -7
-    right: 7
+    left: -4.5
+    right: 4.5
   obstacleCount: 30
   spawnWait: 1
   waveWait: 3
@@ -913,10 +899,10 @@ MonoBehaviour:
   obstacle: {fileID: 6252761054872136390, guid: 3689f0755279cb04f86f4171c5444917,
     type: 3}
   boundary:
-    top: 22
+    top: 10
     bottom: -7
-    left: -7
-    right: 7
+    left: -4
+    right: 4
   obstacleCount: 10
   spawnWait: 3
   waveWait: 0

@@ -8,6 +8,8 @@ public class MoverController : MonoBehaviour
     public float scrollSpeed;
     public Boundary boundary;
     public GameController gameController;
+    public AudioSource obstacleHit;
+    public AudioSource enemyHit;
 
     // Start is called before the first frame update
     void Start()
@@ -50,12 +52,13 @@ public class MoverController : MonoBehaviour
         {
             if (other.gameObject.tag == "Obstacle")
             {
+                gameController.obstacleHit.Play();
                 Destroy(this.gameObject);
             }
 
             if (other.gameObject.tag == "Enemy")
             {
-
+                gameController.enemyHit.Play();
                 Destroy(other.gameObject);
                 Destroy(this.gameObject);
                 gameController.Scores += 100;

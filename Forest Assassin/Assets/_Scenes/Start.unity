@@ -329,11 +329,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 4343048357866261999, guid: a63e3294cda9cb24894147e74d1b065a,
-        type: 3}
-      propertyPath: m_TagString
-      value: GameController
-      objectReference: {fileID: 0}
     - target: {fileID: 4343048357866261997, guid: a63e3294cda9cb24894147e74d1b065a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -397,15 +392,6 @@ PrefabInstance:
       propertyPath: scoresLabel
       value: 
       objectReference: {fileID: 146029223}
-    - target: {fileID: 1701924369, guid: a63e3294cda9cb24894147e74d1b065a, type: 3}
-      propertyPath: gameOver
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1701924369, guid: a63e3294cda9cb24894147e74d1b065a, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2761509856912596683, guid: 76567ce4632606d49a9426044c6ea519,
-        type: 3}
     - target: {fileID: 1701924369, guid: a63e3294cda9cb24894147e74d1b065a, type: 3}
       propertyPath: startLabel
       value: 
