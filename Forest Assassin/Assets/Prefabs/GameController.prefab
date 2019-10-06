@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1701924369}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,4 +47,7 @@ MonoBehaviour:
   _scores: 0
   livesLabel: {fileID: 0}
   scoresLabel: {fileID: 0}
-  gameOver: 0
+  startLabel: {fileID: 0}
+  startButton: {fileID: 0}
+  endLabel: {fileID: 0}
+  restartButton: {fileID: 0}
