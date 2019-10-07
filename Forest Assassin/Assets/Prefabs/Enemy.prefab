@@ -133,6 +133,8 @@ MonoBehaviour:
     bottom: -7
     left: -6
     right: 6
+  obstacleHit: {fileID: 0}
+  enemyHit: {fileID: 0}
   gameController: {fileID: 4343048357866261996, guid: a63e3294cda9cb24894147e74d1b065a,
     type: 3}
 --- !u!114 &462171927
@@ -150,7 +152,7 @@ MonoBehaviour:
   attack: {fileID: 5678578850388813954, guid: 3842853e5b027fd4a988d91c178e1911, type: 3}
   attackArea: {fileID: 110620452}
   attackCount: 1
-  spawnWait: 2
+  attackWait: 1.5
   attackSound: {fileID: -5264154386883002993}
 --- !u!70 &2985453093407646405
 CapsuleCollider2D:

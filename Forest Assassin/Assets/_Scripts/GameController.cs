@@ -4,23 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//2019-10-06 by Jinkyu Choi
 public class GameController : MonoBehaviour
 {
+    //code from Tom Tsiliopoulos
+    [Header("InGame Variables")]
     [SerializeField]
     private int _lives;
 
     [SerializeField]
     private int _scores;
 
+    [Header("UI Variables")]
     public Text livesLabel;
     public Text scoresLabel;
-
     public GameObject startLabel;
     public GameObject startButton;
-
     public GameObject endLabel;
     public GameObject restartButton;
 
+    [Header("Audio Variables")]
     public AudioSource bgm;
     public AudioSource step;
     public AudioSource enemyHit;
@@ -38,7 +41,7 @@ public class GameController : MonoBehaviour
             _lives = value;
             if (_lives < 1)
             {
-
+                //If it dies, it goes to end scene
                 SceneManager.LoadScene("End");
             }
             else
@@ -62,18 +65,11 @@ public class GameController : MonoBehaviour
             scoresLabel.text = "SCORES: " + _scores.ToString();
         }
     }
-    // Start is called before the first frame update
+
+    //code from Tom Tsiliopoulos
     void Start()
     {
-
-        bgm.playOnAwake = true;
-        bgm.loop = true;
-
-
-
-        step.playOnAwake = true;
-        step.loop = true; 
-
+        //This will controll each scene's UI and audio variable according to current scene
         switch(SceneManager.GetActiveScene().name)
         {
             case "Start":
@@ -102,21 +98,25 @@ public class GameController : MonoBehaviour
                 break;
         }
 
+        //This is to initialize Lives and Score at the start of the game
         Lives = 5;
         Scores = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
+    //code from Tom Tsiliopoulos
+    //If start button is clicked, it will active Main scene
     public void OnStartButtonClick()
     {
         SceneManager.LoadScene("Main");
     }
 
+    //code from Tom Tsiliopoulos
+    //If restart button is clicked, it will active Main scene
     public void OnRestartButtionClick()
     {
         SceneManager.LoadScene("Main");

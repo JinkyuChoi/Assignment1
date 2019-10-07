@@ -850,9 +850,7 @@ MonoBehaviour:
     right: 4.5
   obstacleCount: 30
   spawnWait: 1
-  waveWait: 3
   startWait: 0
-  gameOver: 0
 --- !u!4 &1433835734
 Transform:
   m_ObjectHideFlags: 0
@@ -905,9 +903,7 @@ MonoBehaviour:
     right: 4
   obstacleCount: 10
   spawnWait: 3
-  waveWait: 0
   startWait: 10
-  gameOver: 0
 --- !u!4 &1608563390
 Transform:
   m_ObjectHideFlags: 0

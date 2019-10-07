@@ -1,0 +1,10 @@
+Start, Restart img - http://clipartlook.com/img-234165.html
+Background Music - https://opengameart.org/content/epic-race
+Obstacle & PlayerBullet Collision Sound - https://opengameart.org/content/punch
+Enemy & PlayerBullet Collision Sound - https://opengameart.org/content/death-sounds-0
+Player & Other Collsion Sound - https://opengameart.org/content/5-hit-sounds-dying
+Tree img - https://opengameart.org/content/pine-tree-16x16
+Player Footstep Sound - https://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud
+Player Image, Enemy Image - https://opengameart.org/content/animated-top-down-survivor-player
+Player Attack, Enemy Attack Sound - https://opengameart.org/content/25-cc0-bang-firework-sfx
+Font - https://fonts.google.com/specimen/Russo+One

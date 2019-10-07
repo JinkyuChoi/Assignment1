@@ -1,38 +1,42 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+//2019-10-06 by Jinkyu Choi
 public class SpawnAttack : MonoBehaviour
 {
+    //codes from  Wallace Balaniuc
+    [Header("Attack Controller")]
     public GameObject attack;
     public GameObject attackArea;
-    public int attackCount;
-    public float spawnWait;
+    public float attackWait;
 
+    [Header("Audio Controller")]
     public AudioSource attackSound;
 
-    // Start is called before the first frame update
+    //codes from  Wallace Balaniuc
+
     void Start()
     {
-        StartCoroutine(SpawnWaves());
+        //This will continuously start SpawnAttack function
+        StartCoroutine(SpawnAttacks());
     }
 
-    // Update is called once per frame
+
     void Update()
     {
 
     }
 
-    IEnumerator SpawnWaves()
+    //codes from  Wallace Balaniuc
+    //This will spawn attack
+    //It is used to control the attack of the enemies, this will instatiate enemy attack every attackWait seconds
+    IEnumerator SpawnAttacks()
     {
         while (true)
         {
-            for (int i = 0; i < attackCount; i++)
-            {
-                Instantiate(attack, attackArea.transform.position, attackArea.transform.rotation);
-                attackSound.Play();
-                yield return new WaitForSeconds(spawnWait);
-            }
+            Instantiate(attack, attackArea.transform.position, attackArea.transform.rotation);
+            attackSound.Play();
+            yield return new WaitForSeconds(attackWait);
         }
     }
 }

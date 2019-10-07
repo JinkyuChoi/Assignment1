@@ -1,47 +1,40 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Util;
 
+//2019-10-06 by Jinkyu Choi
 public class SpawnObstacle : MonoBehaviour
 {
-    public GameObject obstacle;  // What are we spawning?
-    public Boundary boundary; // Where do we spawn our hazards?
-    public int obstacleCount; // How many hazards per wave?
-    public float spawnWait; // How long between each hazard in each wave?
-    public float waveWait;
+    //codes from  Wallace Balaniuc
+    [Header("Obstacle Controller")]
+    public GameObject obstacle;
+    public Boundary boundary;
+
+    public float spawnWait;
     public float startWait;
 
-    public bool gameOver;
-    // Start is called before the first frame update
+    //codes from  Wallace Balaniuc
     void Start()
     {
-        StartCoroutine(SpawnWaves());
+        //This will continuously start SpawnObstacles function
+        StartCoroutine(SpawnObstacles());
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    IEnumerator SpawnWaves()
+    //codes from  Wallace Balaniuc
+    //It is used to control the obstacle, this will instatiate obstacle every spawnWait seconds
+    IEnumerator SpawnObstacles()
     {
         yield return new WaitForSeconds(startWait);
         while (true)
         {
-            for (int i = 0; i < obstacleCount; i++)
-            {
-                Vector2 spawnPosition = new Vector2(Random.Range(boundary.left, boundary.right), boundary.top);
-                Instantiate(obstacle, spawnPosition, Quaternion.identity);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait); 
-
-            if (gameOver)
-            {
-                break;
-            }
+            Vector2 spawnPosition = new Vector2(Random.Range(boundary.left, boundary.right), boundary.top);
+            Instantiate(obstacle, spawnPosition, Quaternion.identity);
+            yield return new WaitForSeconds(spawnWait);
         }
     }
 }
