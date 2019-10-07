@@ -524,11 +524,8 @@ MonoBehaviour:
     bottom: -7
     left: -7
     right: 7
-  obstacleCount: 30
   spawnWait: 1
-  waveWait: 3
   startWait: 0
-  gameOver: 0
 --- !u!4 &1288971953
 Transform:
   m_ObjectHideFlags: 0
@@ -795,5 +792,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1087807621}
+    - target: {fileID: 2033731210, guid: b7ea149f2cc1c42428833ab63b0d88d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033731210, guid: b7ea149f2cc1c42428833ab63b0d88d7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 450
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ea149f2cc1c42428833ab63b0d88d7, type: 3}
